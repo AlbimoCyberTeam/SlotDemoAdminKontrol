@@ -6,8 +6,12 @@
 }
 
 body{
-    background:#000;
-    color:#fff;
+    background:
+        radial-gradient(circle at top,
+        #1a1a1a,
+        #000);
+
+    color:white;
     min-height:100vh;
     overflow-x:hidden;
 }
@@ -48,77 +52,78 @@ body{
     justify-content:center;
     margin-top:30px;
 }
-
 .slot-machine{
-    background:#111;
-    border:3px solid gold;
-    border-radius:20px;
-    padding:25px;
-    width:95%;
-    max-width:420px;
-    box-shadow:0 0 20px rgba(255,215,0,0.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            #111,
+            #1d1d1d
+        );
+
+    border:2px solid #ffd700;
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,0.5),
+        0 0 40px rgba(255,0,0,0.2);
+
 }
 
-/* REELS */
-
-.reels{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-}
+/* REEL */
 
 .reel{
-    width:90px;
-    height:90px;
-    background:#1c1c1c;
-    border:2px solid gold;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:45px;
-    box-shadow:0 0 10px rgba(255,215,0,0.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            #222,
+            #111
+        );
+
+    animation: glow 2s infinite;
+
 }
 
-/* BUTTON AREA */
+@keyframes glow{
 
-.controls{
-    margin-top:25px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
+    0%{
+        box-shadow:0 0 5px gold;
+    }
+
+    50%{
+        box-shadow:0 0 20px red;
+    }
+
+    100%{
+        box-shadow:0 0 5px gold;
+    }
+
 }
+
+/* BUTTON */
 
 button{
-    padding:12px 18px;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.2s;
+
+    background:
+        linear-gradient(
+            145deg,
+            gold,
+            orange
+        );
+
+    box-shadow:
+        0 0 10px rgba(255,215,0,0.5);
+
 }
 
 button:hover{
+
     transform:scale(1.05);
-}
 
-.spin-btn{
-    background:gold;
-    color:black;
-}
+    box-shadow:
+        0 0 20px red;
 
-.auto-btn{
-    background:#ff0000;
-    color:white;
 }
-
-.buy-btn{
-    background:#00aa55;
-    color:white;
-}
-
 /* BET */
 
 .bet-area{
