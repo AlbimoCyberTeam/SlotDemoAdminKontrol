@@ -21,3 +21,18 @@ function resetSaldo(){
   document.getElementById("adminResult").innerText =
     "Saldo direset";
 }
+function saveMode(){
+
+    let mode =
+        document.getElementById("demoMode").value;
+
+    localStorage.setItem(
+        "demoMode",
+        mode
+    );
+
+    document.getElementById("adminResult")
+        .innerText =
+        "Mode disimpan : " + mode;
+
+}
