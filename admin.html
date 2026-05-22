@@ -27,5 +27,16 @@ Reset
 <div class="result" id="adminResult"></div>
 
 <script src="admin.js"></script>
+
+<script>
+
+if(localStorage.getItem("loginRole") !== "admin"){
+
+    window.location.href =
+        "login.html";
+
+}
+
+</script>
 </body>
 </html>
