@@ -24,10 +24,10 @@ function resetSaldo(){
 function saveMode(){
 
     let mode =
-        document.getElementById("demoMode").value;
+        document.getElementById("ModePilihan").value;
 
     localStorage.setItem(
-        "demoMode",
+        "ModePilihan",
         mode
     );
 
