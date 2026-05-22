@@ -24,6 +24,15 @@ function updateSaldo(){
 
 }
 
+function logout(){
+
+    localStorage.clear();
+
+    window.location.href =
+        "login.html";
+
+}
+
 /* RANDOM SIMBOL */
 
 function randomSymbol(){
