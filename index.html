@@ -134,6 +134,14 @@
 <!-- SCRIPT -->
 
 <script src="script.js"></script>
+<script>
 
+if(localStorage.getItem("loginRole") !== "user"){
+
+    window.location.href = "login.html";
+
+}
+
+</script>
 </body>
 </html>
