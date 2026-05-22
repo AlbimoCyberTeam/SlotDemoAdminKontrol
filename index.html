@@ -1,65 +1,139 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahjong Demo Slot</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mahjong Demo</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+<!-- HEADER -->
+
 <div class="topbar">
-  <div>USER : DEMO PLAYER</div>
-  <div>SALDO : Rp <span id="saldo">100000</span></div>
+
+    <div>
+        USER : DEMO PLAYER
+    </div>
+
+    <div>
+        SALDO Rp :
+        <span id="saldo">100000</span>
+    </div>
+
 </div>
 
-<h1 class="title">BLACK DRAGON SKULL</h1>
+<!-- TITLE -->
+
+<h1 class="title">
+    BLACK DRAGON SKULL
+</h1>
+
+<!-- SLOT -->
 
 <div class="slot-wrapper">
 
     <div class="slot-machine">
 
+        <!-- REELS -->
+
         <div class="reels">
 
-            <div class="reel" id="r1">🐉</div>
-            <div class="reel" id="r2">💎</div>
-            <div class="reel" id="r3">🀄</div>
+            <div class="reel" id="r1">
+                🐉
+            </div>
+
+            <div class="reel" id="r2">
+                💎
+            </div>
+
+            <div class="reel" id="r3">
+                🀄
+            </div>
 
         </div>
+
+        <!-- BUTTON -->
 
         <div class="controls">
 
-            <button class="spin-btn" onclick="spin()">
+            <button
+                class="spin-btn"
+                onclick="spin()">
+
                 SPIN
+
             </button>
 
-            <button class="auto-btn" onclick="toggleAuto()" id="autoBtn">
+            <button
+                class="auto-btn"
+                id="autoBtn"
+                onclick="toggleAuto()">
+
                 AUTO SPIN
+
             </button>
 
-            <button class="buy-btn" onclick="buyFeature()">
+            <button
+                class="buy-btn"
+                onclick="buyFeature()">
+
                 BUY FEATURE
+
             </button>
 
         </div>
+
+        <!-- BET -->
 
         <div class="bet-area">
 
             BET :
+
             <select id="betAmount">
-                <option value="1000">1000</option>
-                <option value="2000">2000</option>
-                <option value="5000">5000</option>
-                <option value="10000">10000</option>
+
+                <option value="1000">
+                    1000
+                </option>
+
+                <option value="2000">
+                    2000
+                </option>
+
+                <option value="5000">
+                    5000
+                </option>
+
+                <option value="10000">
+                    10000
+                </option>
+
             </select>
 
         </div>
 
-        <div class="result" id="result">
+        <!-- RESULT -->
+
+        <div
+            class="result"
+            id="result">
+
             Tekan SPIN
+
         </div>
 
     </div>
+
+</div>
+
+<!-- SCRIPT -->
+
 <script src="script.js"></script>
+
 </body>
 </html>
