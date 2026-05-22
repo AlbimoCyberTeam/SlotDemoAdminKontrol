@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahjong Demo Slot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div>USER : DEMO PLAYER</div>
+  <div>SALDO : Rp <span id="saldo">100000</span></div>
+</div>
+
+<h1 class="title">BLACK DRAGON SKULL</h1>
+
+<div class="slot-machine">
+  <div class="reel" id="r1">🐉</div>
+  <div class="reel" id="r2">💎</div>
+  <div class="reel" id="r3">🀄</div>
+</div>
+
+<div class="controls">
+  <button onclick="spin()">SPIN</button>
+  <button onclick="toggleAuto()" id="autoBtn">AUTO SPIN</button>
+  <button onclick="buyFeature()">BUY FEATURE</button>
+</div>
+
+<div class="bet-area">
+  BET :
+  <select id="betAmount">
+    <option value="1000">1000</option>
+    <option value="2000">2000</option>
+    <option value="5000">5000</option>
+    <option value="10000">10000</option>
+  </select>
+</div>
+
+<div class="result" id="result">Tekan SPIN</div>
+
+<script src="script.js"></script>
+</body>
+</html>
