@@ -107,9 +107,50 @@ function cekMenang(a,b,c,bet){
     const result =
         document.getElementById("result");
 
-    if(a === b && b === c){
+    let mode =
+        localStorage.getItem("demoMode")
+        || "normal";
 
-        let hadiah = bet * 10;
+    let multiplier = 1;
+
+    if(mode === "lucky"){
+
+        multiplier = 3;
+
+    }
+
+    if(mode === "hard"){
+
+        multiplier = 0.5;
+
+    }
+
+    let random =
+        Math.random();
+
+    /* LUCKY MODE */
+
+    if(
+        mode === "lucky" &&
+        random < 0.6
+    ){
+
+        let hadiah = bet * 15;
+
+        saldo += hadiah;
+
+        result.innerText =
+            "🔥 SUPER WIN Rp " +
+            hadiah.toLocaleString();
+
+    }
+
+    /* NORMAL */
+
+    else if(a===b && b===c){
+
+        let hadiah =
+            bet * 10 * multiplier;
 
         saldo += hadiah;
 
@@ -118,13 +159,15 @@ function cekMenang(a,b,c,bet){
             hadiah.toLocaleString();
 
     }
+
     else if(
-        a === b ||
-        b === c ||
-        a === c
+        a===b ||
+        b===c ||
+        a===c
     ){
 
-        let hadiah = bet * 2;
+        let hadiah =
+            bet * 2 * multiplier;
 
         saldo += hadiah;
 
@@ -133,84 +176,14 @@ function cekMenang(a,b,c,bet){
             hadiah.toLocaleString();
 
     }
+
     else{
 
         result.innerText =
-            "❌ ZONK";
+            "❌ LOSE";
 
     }
 
     updateSaldo();
 
 }
-
-/* AUTO SPIN */
-
-function toggleAuto(){
-
-    autoSpin = !autoSpin;
-
-    const btn =
-        document.getElementById("autoBtn");
-
-    if(autoSpin){
-
-        btn.innerText = "STOP AUTO";
-
-        loopAuto();
-
-    }else{
-
-        btn.innerText = "AUTO SPIN";
-
-    }
-
-}
-
-function loopAuto(){
-
-    if(!autoSpin) return;
-
-    spin();
-
-    setTimeout(()=>{
-
-        loopAuto();
-
-    },2500);
-
-}
-
-/* BUY FEATURE */
-
-function buyFeature(){
-
-    const harga = 25000;
-
-    if(saldo < harga){
-
-        alert("Saldo tidak cukup");
-        return;
-
-    }
-
-    saldo -= harga;
-
-    let bonus =
-        Math.floor(Math.random()*50000)
-        + 10000;
-
-    saldo += bonus;
-
-    updateSaldo();
-
-    document.getElementById("result")
-        .innerText =
-        "🔥 FEATURE WIN Rp " +
-        bonus.toLocaleString();
-
-}
-
-/* LOAD */
-
-updateSaldo();
