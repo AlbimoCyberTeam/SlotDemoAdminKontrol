@@ -1,58 +1,168 @@
 *{
-  border:3px solid gold;
-  border-radius:12px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:50px;
-  box-shadow:0 0 15px rgba(255,215,0,0.5);
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
+body{
+    background:#000;
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.topbar{
+    width:100%;
+    background:#d50000;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:16px;
+    font-weight:bold;
+    border-bottom:3px solid gold;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    margin-top:20px;
+    font-size:42px;
+    color:#ff0000;
+    font-family:cursive;
+    text-shadow:
+        0 0 5px red,
+        0 0 15px red,
+        0 0 25px red;
+}
+
+/* SLOT AREA */
+
+.slot-wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.slot-machine{
+    background:#111;
+    border:3px solid gold;
+    border-radius:20px;
+    padding:25px;
+    width:95%;
+    max-width:420px;
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+/* REELS */
+
+.reels{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.reel{
+    width:90px;
+    height:90px;
+    background:#1c1c1c;
+    border:2px solid gold;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:45px;
+    box-shadow:0 0 10px rgba(255,215,0,0.4);
+}
+
+/* BUTTON AREA */
+
 .controls{
-  margin-top:30px;
+    margin-top:25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
 }
 
 button{
-  padding:12px 25px;
-  border:none;
-  border-radius:10px;
-  font-size:18px;
-  margin:5px;
-  cursor:pointer;
-  font-weight:bold;
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
 }
 
 button:hover{
-  transform:scale(1.05);
+    transform:scale(1.05);
 }
+
+.spin-btn{
+    background:gold;
+    color:black;
+}
+
+.auto-btn{
+    background:#ff0000;
+    color:white;
+}
+
+.buy-btn{
+    background:#00aa55;
+    color:white;
+}
+
+/* BET */
 
 .bet-area{
-  margin-top:20px;
-  font-size:22px;
+    margin-top:20px;
+    text-align:center;
 }
 
-select{
-  padding:8px;
-  font-size:18px;
+.bet-area select{
+    padding:8px;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
 }
+
+/* RESULT */
 
 .result{
-  margin-top:25px;
-  font-size:28px;
-  color:#00ff00;
-  font-weight:bold;
+    margin-top:20px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#00ff66;
 }
+
+/* MOBILE */
 
 @media(max-width:600px){
 
-  .reel{
-    width:80px;
-    height:80px;
-    font-size:40px;
-  }
+    .title{
+        font-size:30px;
+    }
 
-  .title{
-    font-size:30px;
-  }
+    .reel{
+        width:75px;
+        height:75px;
+        font-size:38px;
+    }
+
+    button{
+        width:100%;
+    }
+
+    .controls{
+        flex-direction:column;
+    }
 
 }
